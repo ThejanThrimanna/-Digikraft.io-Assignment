@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_small">10sp</dimen>
+    <dimen name="text_size_medium">14sp</dimen>
+    <dimen name="text_size_mid_medium">16sp</dimen>
+    <dimen name="text_size_large">24sp</dimen>
+    <dimen name="text_size_extra_large">32sp</dimen>
+
+    <dimen name="gap_triple_extra_small">1dp</dimen>
+    <dimen name="gap_double_extra_small">2dp</dimen>
+    <dimen name="gap_extra_small">4dp</dimen>
+    <dimen name="gap_small">6dp</dimen>
+    <dimen name="gap_medium">8dp</dimen>
+    <dimen name="gap_large">10dp</dimen>
+    <dimen name="gap_extra_large">16dp</dimen>
+</resources>

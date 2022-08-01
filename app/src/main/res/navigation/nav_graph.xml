@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.thejan.assessment.digikraft_assignment.bike.BikeStationListFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_bike_station_list">
+        <action
+            android:id="@+id/action_startFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/startFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.thejan.assessment.digikraft_assignment.bike.DetailsFragment"
+        android:label="@string/details"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="position"
+            app:argType="com.thejan.assessment.digikraft_assignment.data.model.Features" />
+    </fragment>
+</navigation>
