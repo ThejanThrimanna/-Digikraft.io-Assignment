@@ -1,10 +1,6 @@
 name: Android CI
 
-on:
-  push:
-    branches: [ $default-branch ]
-  pull_request:
-    branches: [ $default-branch ]
+on: pull_request
 
 jobs:
   build:
@@ -17,9 +13,13 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '11'
+          distribution: 'temurin'
+          cache: gradle
 
       - name: Run Tests
         run: ./gradlew test
 
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./gradlew assemble
