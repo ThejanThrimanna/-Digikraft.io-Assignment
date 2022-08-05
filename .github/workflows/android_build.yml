@@ -16,6 +16,9 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
+      - name: Create Local Properties File
+        run: touch local.properties
+
       - name: Run Tests
         run: ./gradlew test
 
