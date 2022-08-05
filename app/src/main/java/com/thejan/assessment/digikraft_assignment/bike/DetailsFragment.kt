@@ -53,6 +53,9 @@ class DetailsFragment : Fragment(), OnMapReadyCallback {
         binding.tvDistance.text = "800m" //TODO:Distance should be calculated
     }
 
+    /**
+     * Initiate map
+     */
     private fun loadMap(savedInstanceState: Bundle?) {
         mapView = MapView(requireContext())
         mapView.onCreate(savedInstanceState)
