@@ -18,11 +18,15 @@ class MainViewModel @Inject constructor(private val stationRepository: StationRe
         MutableLiveData()
     val error: LiveData<Any> = _error
 
+    init {
+        getServices()
+    }
+
     private val _loadList: MutableLiveData<List<Features>> =
         MutableLiveData()
     val loadList: LiveData<List<Features>> = _loadList
 
-    fun getServices() {
+    private fun getServices() {
         viewModelScope.launch {
             stationRepository.fetchMapServices().collect { response ->
                 when (response) {
