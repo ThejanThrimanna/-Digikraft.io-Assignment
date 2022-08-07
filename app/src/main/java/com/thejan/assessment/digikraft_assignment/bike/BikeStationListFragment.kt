@@ -43,11 +43,6 @@ class BikeStationListFragment : Fragment(), StationListAdapter.OnItemActionClick
         observeViewModel()
     }
 
-    override fun onResume() {
-        super.onResume()
-        sharedViewModel.getServices()
-    }
-
     /**
      * Observer the response from viewmodel
      */
