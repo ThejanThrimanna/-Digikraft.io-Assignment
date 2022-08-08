@@ -63,6 +63,9 @@ class DetailsFragment : Fragment(), OnMapReadyCallback {
         mapView.getMapAsync(this)
     }
 
+    /**
+     * On Map Ready callback
+     */
     override fun onMapReady(googleMap: GoogleMap) {
         this.googleMap = googleMap
         mapView.onResume()
